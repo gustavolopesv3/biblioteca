@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>socios</title>
+</head>
+<body>
+<h1>Socios</h1>
+
+{% for i in socio %}
+    <h4>Nome: {{ i.nome}}</h4>
+    <h4>Telefone: {{ i.telefone }}</h4>
+    <h3>----------------------</h3>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="busca">
+<form method="get" action="{% url 'pesquisa_livro' %}">
+    <input type="text" placeholder="Buscar por livro"
+           name="campo_busca">
+    <input type="submit" value="Buscar">
+</form>
+
+</div>
+</body>
+</html>

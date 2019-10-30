@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+</head>
+<body>
+    <table class="bordered striped centered">
+{#        Cabeçalho da tabela#}
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Ano de Edição</th>
+                <th>Edição</th>
+                <th>Editora</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        {# corpo da tabela #}
+        <tbody>
+      {% for i in livro %}
+                <tr>
+
+                    <td>{{ i.0 }}</td>
+                    <td>{{ i.1 }}</td>
+                    <td>{{ i.2 }}</td>
+                    <td>{{ i.3 }}</td>
+                    <td>{{ i.4 }}</td>
+                    <td>{{ i.5 }}</td>
+
+                </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>

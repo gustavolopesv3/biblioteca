@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="blocos">
+    <h4>Resultados da Busca</h4>
+    {% if valor_pesquisa %}
+        <p><strong>Termo pesquisado:</strong>
+            {{ valor_pesquisa }}</p>
+        {% if resultados %}
+            {% for livro in resultados %}
+                {{ livro.titulo }}<br>
+                {{ livro.autor.nome }}
+            {% endfor %}
+        {% else %}
+            <div>Não foi encontrado nenhum livro com os termos desta busca</div>
+        {% endif %}
+
+    {% else %}
+        <div>Não foi passado valor para a busca</div>
+    {% endif %}
+    <hr>
+    <a href="{% url 'index' %}">Voltar</a>
+</div>
+</body>
+</html>
